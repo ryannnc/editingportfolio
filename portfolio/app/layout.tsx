@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import Header from "./components/header";
 const sfPro = localFont({
   src: [
     { path: "./font/sfprodisplayregular.otf", weight: "400", style: "normal" },
@@ -13,8 +13,11 @@ const sfPro = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Ryan Cao's Portfolio",
   description: "Ryan Cao’s Editing Portfolio",
+  icons: {
+    icon: "/pfp.png", 
+  },
 };
 
 export default function RootLayout({
@@ -22,7 +25,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${sfPro.variable} antialiased`}>
+<body
+        className={`${sfPro.variable} antialiased`}
+      >
+        <Header />
         {children}
       </body>
     </html>

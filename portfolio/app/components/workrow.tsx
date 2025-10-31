@@ -2,36 +2,75 @@
 
 import Image from "next/image";
 
-// you can swap this out later for real data
-const images = [
-  { src: "/photos/t1.jpg", alt: "Work 1" },
-  { src: "/photos/t2.jpg", alt: "Work 2" },
-  { src: "/photos/t3.jpg", alt: "Work 3" },
-  { src: "/photos/t4.jpg", alt: "Work 4" },
-  { src: "/photos/t1.jpg", alt: "Work 5" },
-  { src: "/photos/t2.jpg", alt: "Work 6" },
-  { src: "/photos/t3.jpg", alt: "Work 7" },
-  { src: "/photos/t4.jpg", alt: "Work 8" },
-];
-
-export default function WorksGrid() {
+export default function WorksRow() {
   return (
-    <section className="w-full flex justify-center pb-20">
-<div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl px-4 w-full">
-  {images.map((img, idx) => (
-    <div
-      key={idx}
-      className="relative w-full h-40 md:h-44 overflow-hidden rounded-xl bg-zinc-900"
-    >
-      <Image
-        src={img.src}
-        alt={img.alt}
-        fill
-        className="object-cover"
-      />
+    <div className="w-full flex justify-center pb-20">
+      {/* outer width controls how wide the whole strip is */}
+      <div className="flex justify-center items-center gap-3 w-[90vw] max-w-[1000px]">
+        {/* 1 */}
+        <Image
+          src="/photos/t1.jpg"
+          alt="Work 1"
+          width={150}
+          height={300}
+          className="object-contain h-auto 
+                     w-[12vw] sm:w-[10vw] md:w-[150px]"
+        />
+        {/* 2 */}
+        <Image
+          src="/photos/t3.jpg"
+          alt="Work 3"
+          width={150}
+          height={300}
+          className="object-contain h-auto 
+                     w-[12vw] sm:w-[10vw] md:w-[150px]"
+        />
+        {/* 3 */}
+        <Image
+          src="/photos/t4.jpg"
+          alt="Work 4"
+          width={150}
+          height={300}
+          className="object-contain h-auto 
+                     w-[12vw] sm:w-[10vw] md:w-[150px]"
+        />
+        {/* vertical one — a bit wider */}
+        <Image
+          src="/photos/t2.jpg"
+          alt="Work 2"
+          width={285}
+          height={300}
+          className="object-contain h-auto 
+                     w-[16vw] sm:w-[14vw] md:w-[285px]"
+        />
+        {/* 5 */}
+        <Image
+          src="/photos/t5.jpg"
+          alt="Work 5"
+          width={150}
+          height={300}
+          className="object-contain h-auto 
+                     w-[12vw] sm:w-[10vw] md:w-[150px]"
+        />
+        {/* 6 */}
+        <Image
+          src="/photos/t6.jpg"
+          alt="Work 6"
+          width={150}
+          height={300}
+          className="object-contain h-auto 
+                     w-[12vw] sm:w-[10vw] md:w-[150px]"
+        />
+        {/* 7 */}
+        <Image
+          src="/photos/t7.jpg"
+          alt="Work 7"
+          width={150}
+          height={300}
+          className="object-contain h-auto 
+                     w-[12vw] sm:w-[10vw] md:w-[150px]"
+        />
+      </div>
     </div>
-  ))}
-</div>
-    </section>
   );
 }
