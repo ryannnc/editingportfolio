@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section className="flex flex-col items-center text-white font-sf px-6 pt-80 pb-20">
+    <section className="flex flex-col items-center text-white font-sf px-6 pt-20 pb-20">
       {/* Title */}
       <h1 className="text-4xl font-bold mb-6 tracking-wide text-center">
         Get in Contact
