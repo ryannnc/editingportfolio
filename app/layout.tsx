@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header";
+import { Analytics } from "@vercel/analytics/next"
 const sfPro = localFont({
   src: [
     { path: "./font/sfprodisplayregular.otf", weight: "400", style: "normal" },
